@@ -85,6 +85,7 @@ var TranslatableMixin = {
  * @see http://codex.wordpress.org/Function_Reference/_2
  */
 module.exports.__ = React.createClass({
+	displayName: '__',
 	mixins: [ TranslatableMixin ],
 
 	render: function() {
@@ -94,7 +95,9 @@ module.exports.__ = React.createClass({
 			str = Jed.sprintf( this.state.i18n.gettext(
 				this.props.children
 			), this.getStringArguments() );
-		}
+		} else {
+            str = this.props.children;
+        }
 
 		return React.DOM.text( null, str );
 	}
@@ -117,6 +120,7 @@ module.exports.__ = React.createClass({
  * @see http://codex.wordpress.org/Function_Reference/_x
  */
 module.exports._x = React.createClass({
+	displayName: '_x',
 	mixins: [ TranslatableMixin ],
 
 	render: function() {
@@ -149,6 +153,7 @@ module.exports._x = React.createClass({
  * @see http://codex.wordpress.org/Function_Reference/_n
  */
 module.exports._n = React.createClass({
+	displayName: '_n',
 	mixins: [ TranslatableMixin ],
 
 	render: function() {
