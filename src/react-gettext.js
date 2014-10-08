@@ -23,7 +23,9 @@ var TranslatableMixin = {
 						messages: localeData
 					}
 				});
-				this.setState({ i18n: i18n });
+				if (this.isMounted()) {
+					this.setState({ i18n: i18n });
+				}
 			}.bind( this );
 
 			if ( typeof localeData === 'string' ) {
