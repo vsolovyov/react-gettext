@@ -79,7 +79,7 @@ var TranslatableMixin = {
  *
  * Example:
  *
- *   React.renderComponent(
+ *   React.render(
  *     <__ args="WordPress.com\, Dawg">Sign in to %s</__>,
  *     document.body
  *   );
@@ -114,7 +114,7 @@ module.exports.__ = React.createClass({
  *
  * Example:
  *
- *   React.renderComponent(
+ *   React.render(
  *     <_x context="theme">Already Installed</_x>,
  *     document.body
  *   );
@@ -147,7 +147,7 @@ module.exports._x = React.createClass({
  *
  * Example:
  *
- *   React.renderComponent(
+ *   React.render(
  *     <_n single="%s comment approved" plural="%s comments approved" count="2" />,
  *     document.body
  *   );
